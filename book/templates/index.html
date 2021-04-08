@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+          <h1>Book your Covid-19 vaccine now</h1>
+          <h4> Welcome to the booking an appointment application. You can see the available dates to book your vaccine. </h4>
+
+          <div class="row" style="margin-top: 40px">
+              <form action="" method="POST" style="font-size: 2em;">
+                  {% csrf_token %}
+                  <div class="col-sm-4" style="color: white;">
+                      <div class="row container" style="margin-bottom: 10px"> {{ reservation_form.patient_name.label  }}<br></div>
+                      <div class="row container" style="margin-bottom: 10px">  {{ reservation_form.patient_surname.label }}<br></div>
+                      <div class="row container" style="margin-bottom: 10px">  {{ reservation_form.patient_phonenumber.label }}<br></div>
+                      <div class="row container" style="margin-bottom: 10px">  {{ reservation_form.patient_email.label }}<br></div>
+                      <div class="row container" style="margin-bottom: 10px">  {{ reservation_form.patient_checkDate.label }}<br></div>
+
+                  </div>
+                   <div class="col-sm-8" style="color: black;">
+                       <div class="row" style="margin-bottom: 10px"> {{ reservation_form.patient_name}}<br></div>
+                       <div class="row" style="margin-bottom: 10px"> {{ reservation_form.patient_surname }}<br></div>
+                       <div class="row" style="margin-bottom: 10px"> {{ reservation_form.patient_phonenumber }}<br></div>
+                       <div class="row" style="margin-bottom: 10px"> {{ reservation_form.patient_email }}<br></div>
+                       <div class="row" style="margin-bottom: 10px"> {{ reservation_form.patient_checkDate }}<br></div>
+                  </div>
+             <input type="submit" value="Book" style=" width: 200px; height: 50px; color: #ffffff; background-color: #778899; margin-top: 50px ">
+            </form>
+          </div>
+{% endblock %}
+

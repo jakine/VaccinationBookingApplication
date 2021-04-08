@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+body {
+    height: 700px;
+    margin: 0;
+    /* The image used */
+  background-image: url("../img/background.jpg");
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.center {
+    top: 5%;
+   margin: 50px;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.main {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(81, 79, 79, 0.4); /* Black w/opacity/see-through */
+  font-weight: bold;
+    color: black;
+  position: absolute;
+    border: #3e3d3d 2px solid;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 95%;
+  height: 90%;
+  padding: 20px;
+  text-align: center;
+}
+
+.main h1{
+    font-size: 4em;
+}
